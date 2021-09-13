@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Correo</th>
+  </tr>
+  <tr *ngFor="let cliente of clientes">
+    <td>{{cliente.name}}</td>
+    <td>{{cliente.email}}</td>
+  </tr>
+</table>
+
+<app-listado-posts></app-listado-posts>
+<!-- <ul>
+	<li *ngFor="let cliente of clientes">
+		{{cliente.name}}, {{cliente.email}}
+	</li>
+</ul> -->

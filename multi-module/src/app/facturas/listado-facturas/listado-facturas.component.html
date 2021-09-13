@@ -1,0 +1,28 @@
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Fecha</th>
+    <th>Monto</th>
+    <th>Cliente</th>
+  </tr>
+  <tr *ngFor="let factura of facturas">
+    <td>{{factura.id}}</td>
+    <td>{{factura.fecha}}</td>
+    <td>{{factura.monto}}</td>
+    <td>{{factura.cliente}}</td>
+  </tr>
+</table>
+<br>
+Id: <input type="number" name="pNombre" [(ngModel)]="factura.id"/><br/>
+Fecha: <input type="string" name="pPrecio" [(ngModel)]="factura.fecha"><br/>
+Monto: <input type="number" name="pPrecio" [(ngModel)]="factura.monto"><br/>
+Cliente: <input type="number" name="pPrecio" [(ngModel)]="factura.cliente"><br/>
+<input type="button" value="buscar" (click)="BuscarFactura()"/>
+<input type="button" value="guardar" (click)="AgregarFactura()"/>
+
+<!--
+<ul>
+	<li *ngFor="let factura of facturas">
+		{{factura.id}}, {{factura.fecha}}, {{factura.monto}}, {{factura.cliente}}
+	</li>
+</ul> -->

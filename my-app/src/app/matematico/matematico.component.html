@@ -1,0 +1,15 @@
+Numero 1: <input type="number" id="txtNumber1" [(ngModel)]="numero1" (keyup)="calcularOperacion()"/>
+Numero 2: <input type="number" id="txtNumber2" [(ngModel)]="numero2" (keyup)="calcularOperacion()"/>
+
+<div *ngFor="let operacion of operaciones; index as myIndex">
+  <label for="{{operacion}}">
+    <input type="radio" id="radioOperacion{{myIndex + 1}}" name="operacion" (change)="calcularOperacion()" value="{{myIndex}}" [(ngModel)]="operacion"/>
+    {{operacion}}
+  </label>
+</div>
+
+<br/>
+<input type="button" value="Haz Calculo" (click)="calcularOperacion()" />
+<br/>
+
+<!-- <app-matematico-resultado (limpiarCajas)="limpiarCajasResultado()" []></app-matematico-resultado> -->

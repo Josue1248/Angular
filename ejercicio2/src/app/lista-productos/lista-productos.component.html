@@ -1,0 +1,19 @@
+<h2>Lista de productos</h2>
+<table>
+	<tr>
+		<th>Nombre</th>
+		<th>Precio</th>
+	</tr>
+	<tbody>
+		<tr *ngFor="let producto of productos">
+			<td>{{producto.nombre}}</td>
+			<td>{{producto.precio}}</td>
+		</tr>
+    <tr>
+			<td>Total:</td>
+			<td>{{total}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<app-agregar-producto (productsEvent)="receiveMessage($event)"></app-agregar-producto>
